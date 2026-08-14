@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* TEMA CHIARO */
+
+  /* whites */
+  --color-bg-primary: #f8faf9;       /* Off-white */
+  --color-bg-surface: #ffffff;       /* Bianco puro */
+  --color-bg-subtle: #f1f5f3;        /* Sfondo */
+
+  /* symple grays scale */
+  --color-text-primary: #0f172a;     /* Nero profondo */
+  --color-text-secondary: #475569;   /* Grigio medio */
+  --color-border: #e2e8f0;           /* Bordo leggero */
+
+  /*greens*/
+  --color-accent-primary: #059669;   /* semi deep green*/
+  --color-accent-subtle: #ecfdf5;    /* Verde chiarissimo */
+
+  /* pinks */
+  --color-badge-alert-bg: #ffe4e6;   /* Rosa chiaro*/
+  --color-badge-alert-text: #9f1239; /* pink text */
+
+  /* Fluid typography */
+  --font-size-hero: clamp(2rem, 4vw + 1rem, 3.5rem);
+  --font-size-card-title: clamp(1.125rem, 1.5vw + 0.5rem, 1.5rem);
+}
+
+/* TEMA SCURO */
+[data-theme='dark'] {
+  --color-bg-primary: #1e1718;       /* red black*/
+  --color-bg-surface: #1d232a;       /* Grigio scuro per Card */
+  --color-bg-subtle: #021022;        /* blue black*/
+
+  --color-text-primary: #f8fafc;     /* Bianco testo */
+  --color-text-secondary: #94a3b8;   /* Grigio testo */
+  --color-border: #1e293b;           /* grigio scuro*/
+
+  --color-accent-primary: #10b981;   /* Verde chiaro/neon */
+  --color-accent-subtle: rgba(16, 185, 129, 0.15);  /* deep deep green*/
+
+  --color-badge-alert-bg: #4c1d24;   /* Rosa/Rosso scuro */
+  --color-badge-alert-text: #fecdd3; /* Rosa chiaro */
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: system-ui, -apple-system, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
