@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { tokens } from '../../tokens';
+import { tokens } from '../tokens';
 
 interface CardProps {
   children: React.ReactNode;
