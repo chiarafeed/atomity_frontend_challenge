@@ -120,7 +120,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.1 }}
         >
           {data?.metrics.map((metric: SavingsMetric) => (
-            <motion.div key={metric.id} variants={shouldReduceMotion ? {} : itemVariants}>
+            <motion.div key={metric.id} variants={shouldReduceMotion ? {} : itemVariants as any}>
               <Card className="h-full flex flex-col justify-between space-y-4">
                 <div className="space-y-3">
                   <div className="flex items-center justify-between gap-2">
