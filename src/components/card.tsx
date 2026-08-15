@@ -16,7 +16,7 @@ export const Card: React.FC<CardProps> = ({ children, className = '' }) => {
     <motion.div
       whileHover={shouldReduceMotion ? {} : { y: -4, scale: 1.01 }}
       transition={{ duration: tokens.animation.durationFast, ease: 'easeOut' }}
-      className={`card-container p-6 rounded-2xl border shadow-sm transition-colors duration-300 ${className}`}
+      className={`card-container p-6 rounded-2xl border shadow-sm transition-colors duration-300 relative ${className}`}
       style={{
         backgroundColor: tokens.colors.bgSurface,
         borderColor: tokens.colors.border,

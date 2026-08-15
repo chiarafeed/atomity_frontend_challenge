@@ -23,7 +23,7 @@ const fetchSavingsData = async (): Promise<SavingsDataResponse> => {
       title: item.title,
       category: categories[index % categories.length],
       savingsAmount: Math.round(item.price * 10), // prezzo->risparmio
-      impactLevel: impacts[index % impacts.length],
+      impactLevel: (item.price * 10) >= 3000 ? 'High' : (item.price * 10) >= 1000 ? 'Medium' : 'Low',
       description: `Ottimizzazione automatica identificata per ${item.title}. Azione consigliata per ridurre lo spreco di risorse.`,
     };
   });
